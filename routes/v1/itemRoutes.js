@@ -10,9 +10,9 @@ itemRouter.get('/ping',    itemController.pingController);
 
 itemRouter.post('/create',  authenticate, roleMiddleware(['Admin']), itemController.createController);
 
-itemRouter.get('/all', authenticate,  itemController.getAllItemsController );
+itemRouter.get('/all',   itemController.getAllItemsController );
 
-itemRouter.get('/byId/:id', authenticate,  itemController.getItemByIdController);
+itemRouter.get('/byId/:id',   itemController.getItemByIdController);
 
 itemRouter.put('/update/:id', authenticate, roleMiddleware(['Admin']), itemController.updateItemController );
 
